@@ -40,6 +40,15 @@ def render_top_navbar():
     st.markdown("""
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6213033915835012"
      crossorigin="anonymous"></script>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-6213033915835012"
+         data-ad-slot="f08c47fec0942fa0"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
     """, unsafe_allow_html=True)
     
     theme = get_theme()
