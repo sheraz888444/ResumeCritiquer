@@ -1,4 +1,6 @@
+flask>=2.3.0
+flask-cors>=4.0.0
 openai>=1.77.0
 PyPDF2>=3.0.1
 python-dotenv>=1.1.0
-streamlit>=1.45.0
+gunicorn>=21.0.0

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | AI Resume Critiquer</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6213033915835012"
+     crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #58a6ff;
+            --bg-dark: #0d1117;
+            --bg-card: #161b22;
+            --border-color: #30363d;
+            --text-primary: #e6edf3;
+            --text-secondary: #8b949e;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            min-height: 100vh;
+        }
+
+        body.light-theme {
+            background-color: #f5f5f5;
+            color: #212529;
+        }
+
+        .navbar {
+            background: #212529 !important;
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        body.light-theme .navbar {
+            background: #ffffff !important;
+            border-bottom-color: #0d6efd;
+        }
+
+        .navbar-brand { font-weight: 700; font-size: 1.2rem; }
+        
+        .nav-link {
+            color: #adb5bd !important;
+            font-weight: 500;
+            padding: 0.4rem 0.65rem !important;
+            border-radius: 6px;
+        }
+
+        .nav-link:hover { color: var(--primary-color) !important; }
+
+        body.light-theme .nav-link { color: #495057 !important; }
+        body.light-theme .nav-link:hover { color: #0d6efd !important; }
+
+        .theme-toggle {
+            background: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 0.4rem 0.75rem;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        body.light-theme .theme-toggle {
+            background: #e9ecef;
+            color: #212529;
+            border-color: #dee2e6;
+        }
+
+        .main-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: var(--bg-card);
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+        }
+
+        body.light-theme .main-container {
+            background: #ffffff;
+            border-color: #dee2e6;
+        }
+
+        .about-hero {
+            background: linear-gradient(135deg, #161b22 0%, #0d1117 100%);
+            padding: 2rem;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 1.5rem;
+        }
+
+        body.light-theme .about-hero {
+            background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+            border-color: #dee2e6;
+        }
+
+        .about-hero h3 { color: var(--text-primary); margin-top: 0; }
+        body.light-theme .about-hero h3 { color: #212529; }
+        .about-hero p { color: var(--text-secondary); line-height: 1.6; }
+        body.light-theme .about-hero p { color: #495057; }
+
+        h2, h3, h4 { color: var(--text-primary); }
+        body.light-theme h2, body.light-theme h3, body.light-theme h4 { color: #212529; }
+
+        ul li { color: var(--text-secondary); margin-bottom: 0.5rem; }
+        body.light-theme ul li { color: #495057; }
+
+        @media (max-width: 768px) {
+            .main-container { padding: 1.5rem 1rem; margin: 1rem; }
+            .about-hero { padding: 1.5rem 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-file-earmark-text"></i> AI Resume Critiquer
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house"></i> Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="analyze.html"><i class="bi bi-graph-up"></i> Analyze</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html"><i class="bi bi-info-circle"></i> About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html"><i class="bi bi-envelope"></i> Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="privacy.html"><i class="bi bi-shield-lock"></i> Privacy</a></li>
+                    <li class="nav-item">
+                        <button class="theme-toggle ms-2" onclick="toggleTheme()">
+                            <i class="bi bi-moon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-container">
+        <h1><i class="bi bi-info-circle"></i> About AI Resume Critiquer</h1>
+        <hr>
+
+        <div class="about-hero">
+            <h3>Our Mission</h3>
+            <p>AI Resume Critiquer helps job seekers optimize their resumes for Applicant Tracking Systems (ATS) 
+            and stand out to recruiters. We use advanced AI to provide professional, actionable feedback.</p>
+        </div>
+
+        <h3>What We Offer</h3>
+        <ul>
+            <li><strong>ATS Compatibility Score</strong> — See how well your resume passes automated screening</li>
+            <li><strong>Skill Gap Analysis</strong> — Identify missing technical and soft skills</li>
+            <li><strong>Resume vs Job Match</strong> — Compare your resume against job descriptions</li>
+            <li><strong>Keyword Optimization</strong> — Improve ATS keyword matching</li>
+            <li><strong>Formatting & Compliance</strong> — Ensure ATS-friendly structure</li>
+            <li><strong>AI-Powered Insights</strong> — Strengths, weaknesses, and improvement suggestions</li>
+        </ul>
+
+        <h3>How It Works</h3>
+        <ol>
+            <li><strong>Upload</strong> your resume (PDF or TXT)</li>
+            <li><strong>Optional:</strong> Paste the job description for match analysis</li>
+            <li><strong>Analyze</strong> with one click</li>
+            <li><strong>Review</strong> professional feedback and act on recommendations</li>
+        </ol>
+
+        <h3>Built for Job Seekers</h3>
+        <p>Our tool is designed for students, professionals, and career changers who want 
+        to present their best selves to potential employers. Get feedback in seconds — 
+        no sign-up required.</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6213033915835012" crossorigin="anonymous"></script>
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            body.classList.toggle('light-theme');
+            const icon = document.querySelector('.theme-toggle i');
+            if (body.classList.contains('light-theme')) {
+                icon.classList.remove('bi-moon');
+                icon.classList.add('bi-sun');
+                localStorage.setItem('theme', 'light');
+            } else {
+                icon.classList.remove('bi-sun');
+                icon.classList.add('bi-moon');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'light') {
+                document.body.classList.add('light-theme');
+                const icon = document.querySelector('.theme-toggle i');
+                icon.classList.remove('bi-moon');
+                icon.classList.add('bi-sun');
+            }
+        });
+
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</body>
+</html>
