@@ -84,24 +84,28 @@ st.markdown("""
         100% { transform: translateX(0); }
     }
     
+    @media (max-width: 1024px) {
+        .hero { padding: 2.5rem 1.25rem; }
+        .hero h1 { font-size: 1.9rem; }
+        .carousel-container, .carousel-slide { height: 260px; }
+        .feature-card { padding: 1.1rem; }
+    }
     @media (max-width: 768px) {
         .hero { padding: 2rem 1rem; }
-        .hero h1 { font-size: 1.75rem; }
+        .hero h1 { font-size: 1.6rem; }
         .hero p { font-size: 1rem; }
         .carousel-container, .carousel-slide { height: 220px; }
-    }
-    @media (max-width: 768px) {
         .feature-card { padding: 1rem; }
+        .feature-card h4 { font-size: 1rem; }
     }
     @media (max-width: 480px) {
+        .hero { padding: 1.5rem 0.75rem; }
+        .hero h1 { font-size: 1.35rem; }
+        .hero p { font-size: 0.95rem; }
         .carousel-container, .carousel-slide { height: 180px; }
-    }
-    /* Stack columns on mobile */
-    @media (max-width: 640px) {
-        [data-testid="stHorizontalBlock"] [data-testid="column"] {
-            min-width: 100% !important;
-            flex: 1 1 100% !important;
-        }
+        .feature-card { padding: 0.9rem; }
+        .feature-card h4 { font-size: 0.95rem; }
+        .feature-card p { font-size: 0.9rem; }
     }
 </style>
 """, unsafe_allow_html=True)
@@ -184,6 +188,16 @@ footer_html = f"""
     body:has(.theme-light) .app-footer a {{ color: #0d6efd; }}
     .app-footer p {{ margin: 0.5rem 0; color: #8b949e; font-size: 0.9rem; }}
     body:has(.theme-light) .app-footer p {{ color: #6c757d; }}
+    @media (max-width: 768px) {{
+        .app-footer {{ padding: 1.5rem 0.75rem; margin-top: 2rem; }}
+        .app-footer p {{ font-size: 0.85rem; }}
+        .app-footer a {{ margin: 0 0.5rem; display: inline-block; padding: 0.25rem 0; min-height: 44px; line-height: 1.4; }}
+    }}
+    @media (max-width: 480px) {{
+        .app-footer {{ padding: 1rem 0.5rem; }}
+        .app-footer p {{ font-size: 0.8rem; }}
+        .app-footer a {{ margin: 0 0.35rem; }}
+    }}
 </style>
 <footer class="app-footer">
     <p><a href="/{qs}">Home</a> · <a href="/Analyze{qs}">Analyze</a> · <a href="/About{qs}">About</a> · <a href="/Contact{qs}">Contact</a> · <a href="/Privacy_Policy{qs}">Privacy</a></p>

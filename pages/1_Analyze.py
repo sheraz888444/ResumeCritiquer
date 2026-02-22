@@ -43,6 +43,11 @@ st.markdown("""
         .ats-score-number { font-size: 2.25rem; }
         .section-card { padding: 1rem; }
     }
+    @media (max-width: 480px) {
+        .ats-score-card { padding: 1rem 0.75rem; }
+        .ats-score-number { font-size: 1.85rem; }
+        .section-card { padding: 0.85rem; }
+    }
 </style>
 """, unsafe_allow_html=True)
 
