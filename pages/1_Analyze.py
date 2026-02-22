@@ -5,7 +5,7 @@ from utils import get_groq_client, extract_text_from_file, parse_ai_json, render
 st.set_page_config(page_title="Analyze Resume | AI Resume Critiquer", page_icon="📊", layout="wide", initial_sidebar_state="collapsed")
 render_top_navbar()
 
-# Custom styles for analysis results
+# Custom styles for analysis results (responsive)
 st.markdown("""
 <style>
     .ats-score-card {
@@ -17,7 +17,7 @@ st.markdown("""
         border: 1px solid #2d5a87;
         box-shadow: 0 4px 20px rgba(0,0,0,0.3);
     }
-    .ats-score-number { font-size: 3.5rem; font-weight: 700; color: #4fc3f7; }
+    .ats-score-number { font-size: 3rem; font-weight: 700; color: #4fc3f7; }
     .ats-pass { color: #4caf50; }
     .ats-fail { color: #f44336; }
     .ats-moderate { color: #ff9800; }
@@ -37,10 +37,11 @@ st.markdown("""
         margin: 0.5rem 0;
         overflow: hidden;
     }
-    .progress-bar-fill {
-        height: 100%;
-        border-radius: 8px;
-        transition: width 0.5s ease;
+    .progress-bar-fill { height: 100%; border-radius: 8px; transition: width 0.5s ease; }
+    @media (max-width: 768px) {
+        .ats-score-card { padding: 1.5rem 1rem; }
+        .ats-score-number { font-size: 2.25rem; }
+        .section-card { padding: 1rem; }
     }
 </style>
 """, unsafe_allow_html=True)
@@ -276,25 +277,25 @@ if analyze_btn and uploaded_file:
         st.stop()
 
     try:
-        with st.spinner("Analyzing your resume with AI..."):
+        with st.spinner("**Analyzing your resume…** ATS score, skills, and recommendations will be ready in a moment."):
             file_content = extract_text_from_file(uploaded_file)
 
-        if not file_content.strip():
-            st.error("File has no extractable content.")
-            st.stop()
+            if not file_content.strip():
+                st.error("File has no extractable content.")
+                st.stop()
 
-        prompt = build_analysis_prompt(file_content, job_description if job_description.strip() else None, job_role if job_role.strip() else None)
+            prompt = build_analysis_prompt(file_content, job_description if job_description.strip() else None, job_role if job_role.strip() else None)
 
-        response = client.chat.completions.create(
-            model="llama-3.3-70b-versatile",
-            messages=[
-                {"role": "system", "content": "You are an expert ATS resume analyst and HR professional. Return ONLY valid JSON."},
-                {"role": "user", "content": prompt},
-            ],
-            temperature=0.3,
-            max_tokens=4000,
-        )
-        raw = response.choices[0].message.content
+            response = client.chat.completions.create(
+                model="llama-3.3-70b-versatile",
+                messages=[
+                    {"role": "system", "content": "You are an expert ATS resume analyst and HR professional. Return ONLY valid JSON."},
+                    {"role": "user", "content": prompt},
+                ],
+                temperature=0.3,
+                max_tokens=4000,
+            )
+            raw = response.choices[0].message.content
 
         data = parse_ai_json(raw)
         if data:

@@ -5,6 +5,13 @@ from utils import render_top_navbar
 st.set_page_config(page_title="Privacy Policy | AI Resume Critiquer", page_icon="🔒", layout="centered", initial_sidebar_state="collapsed")
 render_top_navbar()
 
+st.markdown("""
+<style>
+    .policy-content { color: #8b949e; line-height: 1.7; }
+    .policy-content h2 { color: #e6edf3; margin-top: 1.5rem; }
+    @media (max-width: 768px) { .policy-content { font-size: 0.95rem; } }
+</style>
+""", unsafe_allow_html=True)
 st.title("🔒 Privacy Policy")
 st.caption("Last updated: February 2025")
 st.markdown("---")

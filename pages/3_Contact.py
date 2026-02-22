@@ -12,10 +12,14 @@ st.markdown("""
         padding: 2rem;
         border-radius: 16px;
         border: 1px solid #30363d;
-        max-width: 600px;
-        margin: 2rem auto;
+        max-width: 560px;
+        margin: 1.5rem auto;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.2);
     }
+    .contact-card h4 { color: #e6edf3; margin-top: 0; }
+    .contact-card p, .contact-card li { color: #8b949e; }
     .contact-card a { color: #58a6ff !important; }
+    @media (max-width: 768px) { .contact-card { padding: 1.5rem 1rem; margin: 1rem auto; } }
 </style>
 """, unsafe_allow_html=True)
 

@@ -1,0 +1,10 @@
+[server]
+headless = true
+# address left default (localhost) so browser works when running locally
+# Railway uses: --server.address 0.0.0.0 in Procfile
+port = 8501
+enableCORS = true
+enableXsrfProtection = true
+
+[browser]
+gatherUsageStats = false

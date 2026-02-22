@@ -9,12 +9,15 @@ st.markdown("""
 <style>
     .about-hero {
         background: linear-gradient(135deg, #161b22 0%, #0d1117 100%);
-        padding: 3rem;
+        padding: 2rem;
         border-radius: 16px;
         border: 1px solid #30363d;
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.2);
     }
-    .about-section { margin: 2rem 0; }
+    .about-hero h3 { color: #e6edf3; margin-top: 0; }
+    .about-hero p { color: #8b949e; line-height: 1.6; }
+    @media (max-width: 768px) { .about-hero { padding: 1.5rem 1rem; } }
 </style>
 """, unsafe_allow_html=True)
 
