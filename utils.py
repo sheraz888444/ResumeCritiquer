@@ -35,6 +35,13 @@ def _theme_query():
 
 def render_top_navbar():
     """Navbar with integrated dark/light toggle. Theme from query_params so it works on all pages."""
+    
+    # AdSense script - loads on all pages
+    st.markdown("""
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6213033915835012"
+     crossorigin="anonymous"></script>
+    """, unsafe_allow_html=True)
+    
     theme = get_theme()
     tq = _theme_query()
     qs = f"?theme={tq}" if tq else ""
