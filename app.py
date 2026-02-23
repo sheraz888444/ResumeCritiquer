@@ -3,7 +3,7 @@ import os
 import io
 import json
 import re
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, jsonify, render_template, send_from_directory
 from flask_cors import CORS
 from dotenv import load_dotenv
 import PyPDF2
@@ -149,6 +149,11 @@ def contact_page():
 @app.route('/privacy.html')
 def privacy_page():
     return render_template('privacy.html')
+
+
+@app.route('/ads.txt')
+def ads_txt():
+    return send_from_directory('.', 'ads.txt')
 
 
 @app.route('/index.html')
